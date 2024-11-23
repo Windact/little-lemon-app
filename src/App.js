@@ -1,4 +1,3 @@
-import './App.css';
 import { createBrowserRouter, Routes, Route, Link, NavLink, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import About from './pages/About';
 import Menu from './pages/Menu';
