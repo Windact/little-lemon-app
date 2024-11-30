@@ -1,4 +1,3 @@
-// import logo from "./logo.svg"
 import { NavLink, Link, Outlet } from "react-router-dom";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -13,7 +12,7 @@ const RootLayout = () => {
         <div className="root-layout">
             <header>
                 <nav className="navbar">
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <Link to={"/"}><img src={logo} className="App-logo" alt="logo" /></Link>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="about">About</NavLink>
                     <NavLink to="help">Help</NavLink>
@@ -22,7 +21,7 @@ const RootLayout = () => {
                     <NavLink to="login">Login</NavLink>
                 </nav>
             </header>
-            <main>
+            <main className="content">
                 <Outlet></Outlet>
             </main>
             <footer>

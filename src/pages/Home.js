@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import DishCard from "../components/DishCard";
 import Testimonial from "../components/Testimonial";
 
@@ -42,6 +43,7 @@ const Home = () => {
             review: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, culpa incidunt ipsum eveniet tempore reiciendis fugiat itaque iure dolor, amet suscipit doloremque maiores soluta dicta in vero optio commodi placeat."
         },
     ]
+    const navigate = useNavigate()
     return ( 
         <div className="home">
             <div className="home-top">
@@ -56,7 +58,7 @@ const Home = () => {
                             <p>We are a familiy owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                         </section>
                     </article>
-                    <button> Reserve a table</button>
+                    <button aria-label="On Click" aria-describedby="Button to go to Reservations page" onClick={(e) => navigate("reservations")}> Reserve a table</button>
                 </div>
                 </div>
                 <img src="/images/restauranfood.jpg" alt="Home restaurant food" />
@@ -64,16 +66,16 @@ const Home = () => {
             <div className="specials-header">
                 {/* <div className="specials"> */}
                 <h1>Specials</h1>
-                <button>Online Menu</button>
+                <button aria-label="On Click" aria-describedby="Button to go to Menu page" onClick={(e) => navigate("menu")}>Online Menu</button>
                 {/* </div> */}
             </div>
             <div className="dish-list">
-            {dishes.map((dish) => <DishCard dish={dish}></DishCard>)}
+            {dishes.map((dish, index) => <DishCard key={index} dish={dish}></DishCard>)}
             </div>
             <div className="testimonials">
                 <h1>Testimonials</h1>
                 <div className="testimonial-list">
-                    {testimonials.map((testimonial) => <Testimonial testimonial={testimonial}></Testimonial>)}
+                    {testimonials.map((testimonial, index) => <Testimonial key={index} testimonial={testimonial}></Testimonial>)}
                 </div>
             </div>
             <div className="home-bottom">

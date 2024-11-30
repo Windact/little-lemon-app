@@ -1,12 +1,13 @@
-import { createBrowserRouter, Routes, Route, Link, NavLink, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import About from './pages/About';
 import Menu from './pages/Menu';
-import Reservations from './pages/Reservations';
+import {Reservations} from './pages/Reservations';
 import OrderOnline from './pages/OrderOnline';
 import Login from './pages/Login';
 import RootLayout from './layouts/RootLayout';
 import Help from './pages/Help';
 import Home from './pages/Home';
+import ConfirmedBooking from "./pages/ConfirmedBooking";
 
 const router =  createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router =  createBrowserRouter(
       <Route path="reservations" element={<Reservations></Reservations>}></Route>
       <Route path='orderOnline' element={<OrderOnline></OrderOnline>}></Route>
       <Route path='login' element={<Login></Login>}></Route>
+      <Route path="bookingConfirmation" element={<ConfirmedBooking></ConfirmedBooking>}></Route>
 
     </Route>
   )

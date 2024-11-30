@@ -1,19 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 
-/* {
-  
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let the main content area grow and push the footer down */
+.content {
+  flex: 1;
+  min-height: 100vh
+}
+
 
 .navbar {
-  /* width: 66.6667%;  */
   display: flex;
-  /* flex-direction: row;  */
-  align-items: center; /* Center items in the navbar */
-  gap: 1rem; /* Add spacing between links */
+  align-items: center;
+  gap: 1rem;
   justify-content: space-evenly;
 }
 
@@ -23,8 +32,6 @@ nav a {
   text-decoration: none;
   color: #333333;
   font-weight: bold;
-  /* font-weight: 20; */
-
 }
 
 nav a:hover {
@@ -32,14 +39,10 @@ nav a:hover {
 }
 
 
-/* nav img {
-  margin-right: 5%;
-} */
-
 .home-top {
   display: flex;
   background-color: #495E57;
-  align-items: center; /* Center items in the navbar */
+  align-items: center;
   justify-content: space-evenly;
 
 
@@ -50,14 +53,8 @@ nav a:hover {
 }
 
 .home-description {
-  /* width: 300px; */
   color: #EDEFEE;
 }
-
-
-/* .home-description article {
-  margin-top: 0%;
-} */
 
 .home-top img {
   margin-top: 2%;
@@ -65,13 +62,6 @@ nav a:hover {
   width: 300px;
   height: 400px;
   margin: 10px;
-  /* top: 2px;
-  left: 81%;
-  right: 10%;
-  z-index: 10;
-  height: 100%;
-  width:315px; */
-  /* margin-left: 150px; */
 
 }
 
@@ -79,7 +69,6 @@ nav a:hover {
 
 .brand-name {
   font-family: "Markazi Text", sans-serif;
-  /* font-style: bold; */
   color: #f4ce14;
   margin-bottom: 0px;
   font-weight: 100pt;
@@ -91,7 +80,6 @@ nav a:hover {
 p {
   font-family: "Karla", sans-serif;
   font-style: regular;
-  /* font-weight: 20; */
 }
 
 button {
@@ -100,19 +88,17 @@ button {
   width: 150px;
   height: 40px;
   cursor: pointer;
-  /* padding:10px; */
 }
-/* button:hover {
-  background-color: #495E57;
-  transition: 0.7s;
-} */
+
+button:hover {
+  background-color: #EE9762;
+}
 
 .specials-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 90%;
-  /* gap: 20%; */
   margin: 0 auto;
 
 }
@@ -123,10 +109,10 @@ button {
 }
 
 .dish-list {
-  display: flex;                /* Enable Flexbox */
-  gap: 1rem;                    /* Add space between the elements */
-  justify-content: space-evenly; /* Horizontal alignment (optional) */
-  align-items: center;          /* Vertical alignment */
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
   width: 80%;
   margin: 0 auto;
 }
@@ -135,11 +121,6 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 30%;
-  /* width: 200px;
-  height: 500px; */
-  /* width: auto;
-  height: auto; */
-  /* max-height: 50%; */
   height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -153,19 +134,17 @@ button {
 .dish img {
   width: 100%;
   height: 30%;
-  /* height: auto; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .dish a {
-  display: inline-flex;         /* Ensures horizontal alignment */
+  display: inline-flex;
   text-decoration: None;
   position:sticky;
   bottom: 0;
   color: #333333;
   font-weight: bold;
-  /* padding-left: 10px; */
   align-items: center;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -183,15 +162,11 @@ button {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+
 }
-/* .dish-heading p {
-  margin: 0;
-} */
+
 .dish-heading p:first-of-type {
   font-weight: bolder;
-  /* padding-left: 10px; */
 }
 
 
@@ -220,6 +195,8 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 30%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .testimonial-avatar {
@@ -234,50 +211,49 @@ button {
 
 .home-bottom {
   display: flex;
-  align-items: center; /* Center items in the navbar */
+  align-items: center;
   justify-content: space-evenly;
   gap: 20%;
   margin-top: 40px;
   width: 90%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 0px;
 }
 
-/* .restaurant-images {
-  width: 100%;        
-  height: 300px;      
-} */
 
 .restaurant-images {
-  position: relative; /* Parent container for absolute positioning */
-  height: 400px;      /* Set a height large enough to display the images */
+  position: relative;
+  height: 400px;
 }
 
 .restaurant-images img {
-  position: absolute; /* Allows precise positioning for overlapping */
-  width: 400px;       /* Fixed width for both images */
-  height: auto;       /* Maintain aspect ratio */
+  position: absolute;
+  width: 300px;
+  height: auto;
 }
 
 .restaurant-images img:first-child {
-  top: 50px;          /* Offset the first image downwards */
-  left: 0;            /* Keep the first image to the left */
-  z-index: 1;         /* Place it below the second image */
+  top: 175px;
+  left: -150px;
+  z-index: 1;
 }
 
 .restaurant-images img:last-child {
-  top: 0;             /* Offset the second image upwards */
-  left: 150px;         /* Shift the second image slightly to the right */
-  z-index: 2;         /* Place it above the first image */
+  top: 145px;
+  left: -100px;
+  z-index: 2;
 }
-
-
 
 
 
 footer {
   display: flex;
-  margin-top: 50px;
-  align-items:flex-start;
-  justify-content:space-evenly;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: #495E57;
+  color: #EDEFEE;
+  padding: 1rem;
 }
 
 .footer-navigation {
@@ -321,20 +297,86 @@ footer {
 
 .social-icon {
   font-size:large;}
-/* .home-description h1 {
-  font-family: "Roboto", sans-serif;
-  font-style: medium;
-  font-weight: 56;
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 100%;
 }
 
-.home-description h2 {
-  font-family: "Markazi Text", sans-serif;
-  font-style: regular;
-  font-weight: 32;
+
+
+.booking form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.home-description p {
-  font-family: "Roboto", sans-serif;
-  font-style: regular;
-  font-weight: 20;
-} */
+.booking input, select {
+  margin-bottom: 10px;
+}
+
+.booking-confirmation {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Tablet: 8-column layout */
+
+
+/* Phone: 4-column layout */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stacks elements vertically */
+  }
+  .home-top{
+    flex-direction: column;
+  }
+  .dish-list{
+    flex-direction: column;
+  }
+  .dish {
+    width: auto;
+    max-width: none;
+  }
+  .testimonial-list {
+    flex-direction: column;
+  }
+  .testimonial {
+    width: auto;
+    max-width: none;
+  }
+  .home-bottom {
+    flex-direction: column;
+  }
+  .restaurant-images {
+    flex-direction: column; /* Stack images vertically */
+    height: auto; /* Remove the fixed height for stacking */
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .restaurant-images img {
+    position: relative; /* Reset position so the images stack */
+    width: 100%; /* Ensure they take full width of the container */
+    margin-bottom: 10px; /* Optional: Add spacing between images */
+
+  }
+
+  .restaurant-images img:first-child,
+  .restaurant-images img:last-child {
+    position: relative; /* Remove absolute positioning */
+    top: auto;
+    left: auto;
+    z-index: auto; /* Reset z-index */
+  }
+  footer{
+    flex-direction: column;
+    align-items:center;
+  }
+}
